@@ -4,7 +4,12 @@
 }
 body {
   background-image: url(./assets/img/main-fondo.jpg);
-  padding-bottom: 20px;
+  background-size: cover;
+}
+
+html,body{
+  height:100%;
+  width:100%;
 }
 
 .navbar {

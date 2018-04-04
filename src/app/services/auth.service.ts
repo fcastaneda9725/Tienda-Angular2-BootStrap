@@ -26,17 +26,10 @@ export class AuthService {
       );
   }
 
-  signIn(email, password) {
-   const credential = firebase.auth.EmailAuthProvider.credential( email, password );
-    return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-        if (errorCode === 'auth/wrong-password' || errorCode == 'auth/invalid-email') {
-          alert('Usuario o contraseña incorrectos, revisa tus datos :)');
-        };
-  }
+  signInRegular(email, password) {
+
+  const credential = firebase.auth.EmailAuthProvider.credential( email, password );
+  return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password)
 
 }
 

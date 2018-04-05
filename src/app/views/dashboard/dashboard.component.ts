@@ -3,6 +3,8 @@ import { AuthService } from '../../services/auth.service';
 
 import { TarjetaProdComponent } from '../../views/tarjeta-prod'
 
+import { DataService } from '../../services/data.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,9 +12,11 @@ import { TarjetaProdComponent } from '../../views/tarjeta-prod'
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService, public dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getUsers()
+
   }
 
 }

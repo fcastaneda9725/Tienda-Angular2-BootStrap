@@ -15,13 +15,15 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 
 import { AuthService } from './services/auth.service';
-import { AuthGuard } from 'app/services/auth-guard.service';
+import { AuthGuard } from './services/auth-guard.service';
 import { MenuComponent } from './views/menu/menu.component';
 
 import { LoadingPageModule } from 'angular-loading-page';
 import { MaterialBarModule } from 'angular-loading-page';
 import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.component';
 
+import { HttpModule } from '@angular/http';
+import { HttpService } from './services/http.service';
 
 @NgModule({
   declarations: [
@@ -35,11 +37,12 @@ import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.componen
     BrowserModule,
     AppRoutes,
     FormsModule,
+    HttpModule,
     AngularFireModule.initializeApp(environment.firebase, 'tienda'),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

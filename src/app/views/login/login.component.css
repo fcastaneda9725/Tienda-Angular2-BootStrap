@@ -29,3 +29,9 @@
    color: red;
    font-size: 20px;
  }
+
+ .form-mod {
+   color: inherit;
+   border: 0;
+   background: transparent;
+ }

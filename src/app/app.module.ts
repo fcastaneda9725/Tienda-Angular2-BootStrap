@@ -18,13 +18,18 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from 'app/services/auth-guard.service';
 import { MenuComponent } from './views/menu/menu.component';
 
+import { LoadingPageModule } from 'angular-loading-page';
+import { MaterialBarModule } from 'angular-loading-page';
+import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    MenuComponent
+    MenuComponent,
+    TarjetaProdComponent
   ],
   imports: [
     BrowserModule,

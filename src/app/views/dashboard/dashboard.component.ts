@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 
+import { TarjetaProdComponent } from '../../views/tarjeta-prod'
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

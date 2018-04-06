@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
-
-import { TarjetaProdComponent } from '../../views/tarjeta-prod'
-
 import { DataService } from '../../services/data.service';
+import { HttpService } from '../../services/http.service';
+
+import { TarjetaProdComponent } from '../views/tarjeta-prod'
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -12,11 +14,9 @@ import { DataService } from '../../services/data.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public authService: AuthService, public dataService: DataService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
-    this.dataService.getUsers()
-
   }
 
 }

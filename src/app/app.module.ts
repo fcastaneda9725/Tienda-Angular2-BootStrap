@@ -18,12 +18,12 @@ import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { MenuComponent } from './views/menu/menu.component';
 
-import { LoadingPageModule } from 'angular-loading-page';
-import { MaterialBarModule } from 'angular-loading-page';
+
 import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.component';
 
 import { HttpModule } from '@angular/http';
 import { HttpService } from './services/http.service';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { HttpService } from './services/http.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AuthGuard, HttpService],
+  providers: [AuthService, AuthGuard, HttpService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

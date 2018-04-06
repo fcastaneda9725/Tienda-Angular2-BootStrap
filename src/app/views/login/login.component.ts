@@ -18,18 +18,23 @@ export class LoginComponent implements OnInit {
   }
 
     signIn() {
-      var codigoDeError = false;
-      var error;
+
       this.authService.signInRegular(this.user.email, this.user.password)
       .then((res) => {
          console.log(res);
 
          this.router.navigate(['dashboard']);
       })
-      .catch((err) => { console.log('Error: ' err);
-                        if (err){
-                          this.errorInicioSesion = 'Error en el inicio de sesión';
-                        });
+      .catch((err) => {
+        console.log(err);
+
+        if (err){
+            this.errorInicioSesion = 'Error en el inicio de sesión';
+          };
+    });
+
+
+
     }
 
 

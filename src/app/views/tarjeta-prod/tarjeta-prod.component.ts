@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'tarjeta-prod',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetaProdComponent implements OnInit {
 
-  constructor() { }
+  constructor( public dataService : DataService ) { }
 
+  datos() {
+    this.dataService.getUsers();
+  }
   ngOnInit() {
+    this.dataService.getUsers();
   }
 
 }

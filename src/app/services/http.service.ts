@@ -4,14 +4,11 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class HttpService {
-  
-  constructor( private http : Http ) { }
 
+  constructor(private http : Http) { }
 
-  getDatos() {
+  getDatos(){
     return this.http.get('https://tienda-next-u.firebaseio.com/productos.json')
       .map((response: Response)=> response.json())
   }
-
-
 }

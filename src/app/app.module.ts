@@ -23,7 +23,7 @@ import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.componen
 
 import { HttpModule } from '@angular/http';
 import { HttpService } from './services/http.service';
-import { DataService } from './services/data.service';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { DataService } from './services/data.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AuthGuard, HttpService, DataService],
+  providers: [AuthService, AuthGuard, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

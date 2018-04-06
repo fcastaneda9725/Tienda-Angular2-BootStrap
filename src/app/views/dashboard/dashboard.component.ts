@@ -3,7 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { DataService } from '../../services/data.service';
 import { HttpService } from '../../services/http.service';
 
-import { TarjetaProdComponent } from '../views/tarjeta-prod'
+import { TarjetaProdComponent } from '../tarjeta-prod/tarjeta-prod.component';
 
 
 

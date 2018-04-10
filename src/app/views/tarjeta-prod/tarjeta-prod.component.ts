@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
-import { TitleCasePipe } from '@angular/common';
+import { TitleCasePipe, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'tarjeta-prod',

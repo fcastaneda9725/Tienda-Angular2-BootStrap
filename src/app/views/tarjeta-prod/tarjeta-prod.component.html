@@ -4,7 +4,8 @@
       <img class="card-img-top" [src]="producto.url" [alt]="producto.nombre">
       <div class="card-body">
         <h5 class="card-title">{{producto.nombre | titlecase}}</h5>
-        <p class="card-text">{{producto.descripcion}}</p>
+        <p class="card-text"><strong>Precio:</strong> {{producto.precio | currency}}</p>
+        <p class="card-text"><strong>Unidades Disponibles:</strong> {{producto.cantidad}}</p>
         <div class="row">
           <div class="col-6">
               <button class="btn btn-primary"type="button" name="Ver Más">Ver Más</button>
@@ -12,7 +13,7 @@
           <div class="col-6">
             <div class="row">
               <button class="btn btn-warning col-5"type="button" name="Añadir">Añadir</button>
-              <input class="form-control col-5 ml-2" type="number" name="numero" [value]="producto.cantidad" min="0" [max]="producto.cantidad">
+              <input class="form-control col-5 ml-2" type="number" name="cantidad" value="1" min="0" [max]="producto.cantidad">
             </div>
           </div>
 

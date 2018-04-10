@@ -8,7 +8,9 @@ export class DataService {
 
   public prod: any [] = [];
 
-  constructor(private httpService : HttpService){ }
+  constructor(private httpService : HttpService){
+      this.getUsers();
+}
 
 
 

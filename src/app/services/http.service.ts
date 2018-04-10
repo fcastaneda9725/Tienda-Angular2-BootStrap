@@ -4,8 +4,10 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class HttpService {
-producto: any [] = []
-  constructor(private http : Http) { }
+
+  constructor(private http : Http) {
+      this.getDatos();
+}
 
   getDatos(){
     return this.http.get('https://tienda-next-u.firebaseio.com/productos.json')

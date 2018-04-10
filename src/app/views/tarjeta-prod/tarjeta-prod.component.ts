@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
 
 @Component({
@@ -8,14 +8,9 @@ import { DataService } from '../../services/data.service';
 })
 export class TarjetaProdComponent implements OnInit {
 
-  constructor( public dataService : DataService ) { }
+  constructor( public _dataS : DataService ) { }
 
 
-  datos() {
-    this.dataService.getUsers();
-  }
-  ngOnInit() {
-    this.dataService.getUsers();
-  }
+
 
 }

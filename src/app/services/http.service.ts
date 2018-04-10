@@ -4,7 +4,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class HttpService {
-
+producto: any [] = []
   constructor(private http : Http) { }
 
   getDatos(){

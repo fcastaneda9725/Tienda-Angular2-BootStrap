@@ -10,6 +10,7 @@ export class TarjetaProdComponent implements OnInit {
 
   constructor( public dataService : DataService ) { }
 
+
   datos() {
     this.dataService.getUsers();
   }

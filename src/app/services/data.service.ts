@@ -5,22 +5,24 @@ import { Response } from '@angular/http';
 
 @Injectable()
 export class DataService {
-  private usuarios: string[] = [];
+
+  public prod: any [] = [];
 
   constructor(private httpService : HttpService){ }
 
 
 
-  newUser(nombre: string){
-    this.usuarios.push(nombre);
-  }
-
   getUsers(){
     this.httpService.getDatos()
       .subscribe(
-        (data: Response) => console.log(data)
+        (data: Response) => { this.prod = data;
+                              console.log(this.prod);
+                            };
+
+
+
       )
-    return this.usuarios;
+    return this.prod;
   }
 
 

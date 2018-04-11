@@ -5,7 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{producto.nombre | titlecase}}</h5>
         <p class="card-text"><strong>Precio:</strong> {{producto.precio | currency}}</p>
-        <p class="card-text"><strong>Unidades Disponibles:</strong> {{producto.cantidad}}</p>
+        <p class="card-text"><strong>Unidades Disponibles:</strong> {{producto.cantidad - producto.value}}</p>
         <div class="row">
           <div class="col-6">
               <button class="btn btn-primary"type="button" name="Ver Más">Ver Más</button>

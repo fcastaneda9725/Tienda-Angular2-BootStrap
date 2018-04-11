@@ -23,6 +23,7 @@ import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.componen
 
 import { HttpModule } from '@angular/http';
 import { HttpService } from './services/http.service';
+import { RestaPipe } from './pipes/resta.pipe';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HttpService } from './services/http.service';
     LoginComponent,
     DashboardComponent,
     MenuComponent,
-    TarjetaProdComponent
+    TarjetaProdComponent,
+    RestaPipe
   ],
   imports: [
     BrowserModule,

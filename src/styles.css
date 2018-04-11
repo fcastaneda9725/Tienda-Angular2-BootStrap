@@ -5,6 +5,7 @@
 body {
   background-image: url(./assets/img/main-fondo.jpg);
   background-size: cover;
+  font-family: 'Dosis', sans-serif;
 }
 
 html,body{

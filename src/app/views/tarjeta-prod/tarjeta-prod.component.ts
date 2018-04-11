@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { TitleCasePipe, CurrencyPipe } from '@angular/common';
+import { FormsModule, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'tarjeta-prod',
@@ -8,7 +9,7 @@ import { TitleCasePipe, CurrencyPipe } from '@angular/common';
   styleUrls: ['./tarjeta-prod.component.css']
 })
 export class TarjetaProdComponent implements OnInit {
-
+  
   constructor( public _dataS : DataService ) { }
 
 

@@ -23,7 +23,7 @@ export class DataService {
 
 
 
-      )
+      );
     return this.prod;
   }
 

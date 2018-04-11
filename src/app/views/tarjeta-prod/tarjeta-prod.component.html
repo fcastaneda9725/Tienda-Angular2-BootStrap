@@ -13,7 +13,8 @@
           <div class="col-6">
             <div class="row">
               <button class="btn btn-warning col-5"type="button" name="Añadir">Añadir</button>
-              <input class="form-control col-5 ml-2" type="number" name="cantidad" value="1" min="0" [max]="producto.cantidad">
+              <input class="form-control col-5 ml-2" type="number" name="cantidad" min="0" [max]="producto.cantidad" [(ngModel)]="producto.value">
+              <div class="alert alert-warning" *ngIf="producto.value > producto.cantidad">No tenemos tanto producto.</div>
             </div>
           </div>
 

@@ -9,10 +9,8 @@ import { FormsModule, FormControl } from '@angular/forms';
   styleUrls: ['./tarjeta-prod.component.css']
 })
 export class TarjetaProdComponent implements OnInit {
-  
+
   constructor( public _dataS : DataService ) { }
-
-
 
 
 }

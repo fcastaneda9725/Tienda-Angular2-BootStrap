@@ -13,8 +13,9 @@ import { TarjetaProdComponent } from '../tarjeta-prod/tarjeta-prod.component';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(public authService: AuthService) { }
+  
+  constructor(public authService: AuthService) {
+  }
 
   ngOnInit() {
   }

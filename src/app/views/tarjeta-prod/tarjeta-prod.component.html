@@ -1,27 +1,36 @@
-<div class="margen-inferior" *ngFor="let producto of _dataS.prod; let i = index;">
-  <div class="card-deck" *ngIf="i%3 === 0">
+<div class="container">
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <h3 >Catálogo de Productos</h3>
+  <form class="form-inline flex-column my-2 my-lg-0">
+    <p class="navbar-light text-center">¿Qué estás buscando?</p>
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar producto..." #buscaBar>
+  </form>
+</nav>
 
-    <div class="card" *ngFor="let item of _dataS.prod | slice:i:i+3">
-      <img class="card-img-top img-fluid" [src]="item.url" [alt]="item.nombre">
-      <div class="card-body">
-        <h5 class="card-title">{{item.nombre | titlecase }}</h5>
-        <p class="card-text"><strong>Precio:</strong> {{item.precio | currency}}</p>
-        <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad - item.value}}</p>
-        <div class="row align-items-center justify-content-around">
-          <div class="col">
-              <button class="btn btn-primary"type="button" name="Ver Más">Ver Más</button>
-          </div>
-          <div class="col">
-            <div class="row">
-              <button class="btn btn-warning col"type="button" name="Añadir">Añadir</button>
-              <input class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.value">
+  <div class="margen-inferior" *ngFor="let producto of _dataS.prod; let i = index;">
+    <div class="card-deck" *ngIf="i%3 === 0">
+
+      <div class="card" *ngFor="let item of _dataS.prod | slice:i:i+3  | buscador: 'nombre' : buscaBar.value" style="width: 18rem;">
+        <img class="card-img-top img-fluid" [src]="item.url" [alt]="item.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nombre | titlecase }}</h5>
+          <p class="card-text"><strong>Precio:</strong> {{item.precio | currency}}</p>
+          <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad - item.value}}</p>
+          <div class="row align-items-center justify-content-around">
+            <div class="col">
+                <button class="btn btn-primary"type="button" name="Ver Más">Ver Más</button>
             </div>
+            <div class="col">
+              <div class="row">
+                <button class="btn btn-warning col"type="button" name="Añadir">Añadir</button>
+                <input class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.value">
+              </div>
+            </div>
+            <div class="alert alert-warning" *ngIf="item.value > item.cantidad">No tenemos tanto producto.</div>
           </div>
-          <div class="alert alert-warning" *ngIf="item.value > item.cantidad">No tenemos tanto producto.</div>
         </div>
       </div>
     </div>
-
   </div>
 
 </div>

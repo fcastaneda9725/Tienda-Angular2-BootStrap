@@ -6,7 +6,7 @@ import { Response } from '@angular/http';
 @Injectable()
 export class DataService {
 
-  public prod: any [] = [];
+  public prod: any;
 
   constructor(private httpService : HttpService){
       this.getBase();

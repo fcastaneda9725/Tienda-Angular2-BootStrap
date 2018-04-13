@@ -24,6 +24,7 @@ import { TarjetaProdComponent } from './views/tarjeta-prod/tarjeta-prod.componen
 import { HttpModule } from '@angular/http';
 import { HttpService } from './services/http.service';
 import { BuscadorPipe } from './pipe/buscador.pipe';
+import { VerMasComponent } from './views/ver-mas/ver-mas.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BuscadorPipe } from './pipe/buscador.pipe';
     DashboardComponent,
     MenuComponent,
     TarjetaProdComponent,
-    BuscadorPipe
+    BuscadorPipe,
+    VerMasComponent
   ],
   imports: [
     BrowserModule,

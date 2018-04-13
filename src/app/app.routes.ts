@@ -17,7 +17,7 @@ const appRoutes: Routes = [
         component: DashboardComponent
     },
     {
-        path: 'ver-mas',
+        path: ':nombre',
         canActivate: [AuthGuard],
         component: VerMasComponent
     }

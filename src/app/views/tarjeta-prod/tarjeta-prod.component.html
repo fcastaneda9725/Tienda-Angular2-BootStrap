@@ -1,5 +1,5 @@
-<div class="container">
-  <nav class="navbar navbar-light bg-light justify-content-between">
+<div class="container scrollDown">
+  <nav class="navbar navbar-light bg-light justify-content-between sticky-top">
     <h3 >Catálogo de Productos</h3>
   <form class="form-inline flex-column my-2 my-lg-0">
     <p class="navbar-light text-center">¿Qué estás buscando?</p>
@@ -7,7 +7,7 @@
   </form>
 </nav>
 
-  <div class="margen-inferior" *ngFor="let producto of _dataS.prod; let i = index;">
+  <div class="margen-inferior" *ngFor="let producto of _dataS.prod; let i = index;" >
     <div class="col" *ngIf="i%3 === 0">
 
       <div class="row justify-content-around">
@@ -20,7 +20,7 @@
             <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad}}</p>
             <div class="row align-items-center justify-content-around">
               <div class="col">
-                  <button class="btn btn-primary"type="button" name="Ver Más" (click)="prueba ()">Ver Más</button>
+                  <button class="btn btn-primary"type="button" name="Ver Más" routerLink="/ver-mas">Ver Más</button>
               </div>
               <div class="col">
                 <div class="row">

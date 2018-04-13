@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { TitleCasePipe, CurrencyPipe } from '@angular/common';
 import { FormsModule, FormControl } from '@angular/forms';
+import { AppRoutes } from '../../app.routes';
 
 
 

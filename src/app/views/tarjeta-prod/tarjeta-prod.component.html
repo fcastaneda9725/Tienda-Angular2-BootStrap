@@ -20,15 +20,15 @@
             <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad}}</p>
             <div class="row align-items-center justify-content-around">
               <div class="col">
-                  <button class="btn btn-primary"type="button" name="Ver Más">Ver Más</button>
+                  <button class="btn btn-primary"type="button" name="Ver Más" (click)="prueba ()">Ver Más</button>
               </div>
               <div class="col">
                 <div class="row">
-                  <button class="btn btn-warning col"type="button" name="Añadir" (click)="anadirCarrito( item.id , item.valor)">Añadir</button>
-                  <input  [id]="item.id" class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.valor">
+                  <button [disabled]="item.valor > item.cantidad" class="btn btn-warning col" type="button" name="Añadir" (click)="anadirCarrito( item.id )">Añadir</button>
+                  <input [id]="item.id" class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.valor">
                 </div>
               </div>
-              <div class="alert alert-warning" *ngIf="item.valor > item.cantidad">No tenemos tanto producto.</div>
+              <div class="alert alert-warning" *ngIf="item.valor > item.cantidad" >No tenemos tanto producto.</div>
             </div>
           </div>
         </div>

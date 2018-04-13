@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { TitleCasePipe, CurrencyPipe } from '@angular/common';
 import { FormsModule, FormControl } from '@angular/forms';
@@ -11,17 +11,25 @@ import { FormsModule, FormControl } from '@angular/forms';
   styleUrls: ['./tarjeta-prod.component.css']
 })
 export class TarjetaProdComponent implements OnInit {
-  public baseDatos: any [];
-  public i: number;
-  public valor: number;
+  private baseDatos: any [] = [];
+  i: number = 0;
+  valor: number = 100;
 
-  constructor( public _dataS : DataService ) {  }
+  constructor( public _dataS : DataService ) { }
 
-anadirCarrito( i, valor) {
+anadirCarrito( i ) {
 
   this.baseDatos = this._dataS.prod;
   console.log(this.baseDatos);
   console.log(this.baseDatos[i].valor);
+
+  return this._dataS.prod[i].cantidad = this.baseDatos[i].cantidad - this.baseDatos[i].valor;
                   }
+
+
+
+ngOnInit() {
+
+  }
 
 }

@@ -9,22 +9,18 @@ export class DataService {
   public prod: any [] = [];
 
   constructor(private httpService : HttpService){
-      this.getUsers();
+      this.getBase();
 }
 
 
 
-  getUsers(){
+  getBase(){
     this.httpService.getDatos()
       .subscribe(
         (data: Response) => { this.prod = data;
                               console.log(this.prod);
-                            };
+                            })
 
-
-
-      );
-    return this.prod;
   }
 
 

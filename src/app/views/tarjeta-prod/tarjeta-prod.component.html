@@ -17,18 +17,18 @@
           <div class="card-body">
             <h5 class="card-title">{{item.nombre | titlecase }}</h5>
             <p class="card-text"><strong>Precio:</strong> {{item.precio | currency}}</p>
-            <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad - item.value}}</p>
+            <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad}}</p>
             <div class="row align-items-center justify-content-around">
               <div class="col">
                   <button class="btn btn-primary"type="button" name="Ver Más">Ver Más</button>
               </div>
               <div class="col">
                 <div class="row">
-                  <button class="btn btn-warning col"type="button" name="Añadir">Añadir</button>
-                  <input class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.value">
+                  <button class="btn btn-warning col"type="button" name="Añadir" (click)="anadirCarrito( item.id , item.valor)">Añadir</button>
+                  <input  [id]="item.id" class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.valor">
                 </div>
               </div>
-              <div class="alert alert-warning" *ngIf="item.value > item.cantidad">No tenemos tanto producto.</div>
+              <div class="alert alert-warning" *ngIf="item.valor > item.cantidad">No tenemos tanto producto.</div>
             </div>
           </div>
         </div>

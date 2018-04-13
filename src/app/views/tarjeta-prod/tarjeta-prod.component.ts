@@ -12,8 +12,7 @@ import { FormsModule, FormControl } from '@angular/forms';
 })
 export class TarjetaProdComponent implements OnInit {
   private baseDatos: any [] = [];
-  i: number = 0;
-  valor: number = 100;
+  i: number;
 
   constructor( public _dataS : DataService ) { }
 

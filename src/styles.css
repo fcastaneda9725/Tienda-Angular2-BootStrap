@@ -16,3 +16,7 @@ html,body{
 .navbar {
   margin-bottom: 20px;
 }
+.scrollDown {
+  overflow-y: scroll;
+  max-height: 90%;
+}

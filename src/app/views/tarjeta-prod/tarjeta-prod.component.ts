@@ -26,6 +26,10 @@ anadirCarrito( i ) {
   return this._dataS.prod[i].cantidad = this.baseDatos[i].cantidad - this.baseDatos[i].valor;
                   }
 
+  verM ( i ) {
+    this._dataS.asignarIndex(i);
+  }
+
 
 
 ngOnInit() {

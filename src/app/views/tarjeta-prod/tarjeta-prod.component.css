@@ -10,7 +10,3 @@
 .container {
   background: white;
 }
-.scrollDown {
-  overflow-y: scroll;
-  max-height: 90%;
-}

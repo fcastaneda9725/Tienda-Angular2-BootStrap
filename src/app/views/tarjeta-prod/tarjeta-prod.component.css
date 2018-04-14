@@ -7,3 +7,11 @@
 .margen-inferior {
   margin-bottom: 15px;
 }
+.card {
+  width: 18rem;
+}
+@media only screen and (max-width: 425px) {
+    .card {
+      width: 100%;
+    }
+}

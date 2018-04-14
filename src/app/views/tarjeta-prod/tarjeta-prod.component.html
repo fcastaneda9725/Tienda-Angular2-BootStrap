@@ -7,35 +7,28 @@
   </form>
 </nav>
 
-  <div class="margen-inferior" *ngFor="let producto of _dataS.prod; let i = index;" >
-    <div class="col" *ngIf="i%3 === 0">
+<div class="d-flex flex-row flex-wrap">
 
-      <div class="row justify-content-around">
-
-        <div class="card" *ngFor="let item of _dataS.prod | slice:i:i+3  | buscador: 'nombre' : buscaBar.value" style="width: 18rem;">
-          <img class="card-img-top img-fluid" [src]="item.url" [alt]="item.nombre">
-          <div class="card-body">
-            <h5 class="card-title">{{item.nombre | titlecase }}</h5>
-            <p class="card-text"><strong>Precio:</strong> {{item.precio | currency}}</p>
-            <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad}}</p>
-            <div class="row align-items-center justify-content-around">
-              <div class="col">
-                  <button class="btn btn-primary" type="button" name="Ver Más" routerLink="/producto/{{item.nombre}}" (click)="verM( item.id )">Ver Más</button>
-              </div>
-              <div class="col">
-                <div class="row">
-                  <button [disabled]="item.valor > item.cantidad" class="btn btn-warning col" type="button" name="Añadir" (click)="anadirCarrito( item.id )">Añadir</button>
-                  <input [id]="item.id" class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="item.cantidad" [(ngModel)]="item.valor">
-                </div>
-              </div>
-              <div class="alert alert-warning" *ngIf="item.valor > item.cantidad" >No tenemos tanto producto.</div>
-            </div>
+  <div class="card p-3 mr-auto margen-inferior" *ngFor="let producto of _dataS.prod | buscador: 'nombre' : buscaBar.value">
+    <img class="card-img-top img-fluid" [src]="producto.url" [alt]="producto.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{producto.nombre | titlecase }}</h5>
+      <p class="card-text"><strong>Precio:</strong> {{producto.precio | currency}}</p>
+      <p class="card-text"><strong>Unidades Disponibles:</strong> {{producto.cantidad}}</p>
+      <div class="row align-items-center justify-content-around">
+        <div class="col">
+            <button class="btn btn-primary" type="button" name="Ver Más" routerLink="/producto/{{producto.nombre}}" (click)="verM( producto.id )">Ver Más</button>
+        </div>
+        <div class="col">
+          <div class="row">
+            <button [disabled]="producto.valor > producto.cantidad" class="btn btn-warning col" type="button" name="Añadir" (click)="anadirCarrito( producto.id )">Añadir</button>
+            <input [id]="producto.id" class="form-control col ml-2" type="number" name="cantidad" min="0" [max]="producto.cantidad" [(ngModel)]="producto.valor">
           </div>
         </div>
-
+        <div class="alert alert-warning" *ngIf="producto.valor > producto.cantidad" >No tenemos tanto producto.</div>
       </div>
-
     </div>
   </div>
 
+</div>
 </div>

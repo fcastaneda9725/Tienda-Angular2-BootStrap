@@ -17,7 +17,7 @@
                       <label for="contraseña">Contraseña</label>
                       <input #contra="ngModel" type="password" class="form-control" name="password" [(ngModel)]="user.password" required >
                       <label *ngIf="!contra.valid && contra.touched" class="alert alert-danger">Introduce tu contraseña.</label>
-                      <label *ngIf="contra.valid" class="red" [innerHTML]="errorInicioSesion"></label>
+                      <label class="red" [innerHTML]="errorInicioSesion"></label>
                     </div>
 
                     <div class="form-group text-center">

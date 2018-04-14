@@ -25,6 +25,7 @@ import { HttpModule } from '@angular/http';
 import { HttpService } from './services/http.service';
 import { BuscadorPipe } from './pipe/buscador.pipe';
 import { VerMasComponent } from './views/ver-mas/ver-mas.component';
+import { CarritoComponent } from './views/carrito/carrito.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { VerMasComponent } from './views/ver-mas/ver-mas.component';
     MenuComponent,
     TarjetaProdComponent,
     BuscadorPipe,
-    VerMasComponent
+    VerMasComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

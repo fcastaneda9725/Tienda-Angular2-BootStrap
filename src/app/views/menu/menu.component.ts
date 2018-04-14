@@ -3,7 +3,7 @@ import { AppRoutes } from '../../app.routes';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })

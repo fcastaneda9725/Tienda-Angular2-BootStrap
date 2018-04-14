@@ -20,3 +20,6 @@ html,body{
   overflow-y: scroll;
   max-height: 90%;
 }
+.blanco {
+  background: white;
+}

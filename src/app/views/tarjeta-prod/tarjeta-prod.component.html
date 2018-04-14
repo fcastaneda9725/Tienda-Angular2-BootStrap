@@ -1,4 +1,4 @@
-<div class="container scrollDown">
+<div class="container scrollDown blanco">
   <nav class="navbar navbar-light bg-light justify-content-between sticky-top rounded">
     <h3 >Catálogo de Productos</h3>
   <form class="form-inline flex-column my-2 my-lg-0">
@@ -20,7 +20,7 @@
             <p class="card-text"><strong>Unidades Disponibles:</strong> {{item.cantidad}}</p>
             <div class="row align-items-center justify-content-around">
               <div class="col">
-                  <button class="btn btn-primary" type="button" name="Ver Más" routerLink="/{{item.nombre}}" (click)="verM( item.id )">Ver Más</button>
+                  <button class="btn btn-primary" type="button" name="Ver Más" routerLink="/producto/{{item.nombre}}" (click)="verM( item.id )">Ver Más</button>
               </div>
               <div class="col">
                 <div class="row">

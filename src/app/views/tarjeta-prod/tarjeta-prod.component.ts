@@ -13,8 +13,9 @@ import { AppRoutes } from '../../app.routes';
 })
 export class TarjetaProdComponent implements OnInit {
   private baseDatos: any [] = [];
+  prueba: any [] = [];
   i: number;
-
+  j: number =0;
   constructor( public _dataS : DataService ) { }
 
 anadirCarrito( i ) {
@@ -22,6 +23,10 @@ anadirCarrito( i ) {
   this.baseDatos = this._dataS.prod;
   console.log(this.baseDatos);
   console.log(this.baseDatos[i].valor);
+  this.prueba[this.j] = this.baseDatos[i];
+  this.j = this.j+1;
+  console.log(this.j);
+  console.log(this.prueba);
 
   return this._dataS.prod[i].cantidad = this.baseDatos[i].cantidad - this.baseDatos[i].valor;
                   }

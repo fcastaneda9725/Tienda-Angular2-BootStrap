@@ -3,8 +3,13 @@
   <menu></menu>
 
 </div>
+<div class="container blanco espacio-interno" *ngIf="_dataS.j == 0">
+  <p class="alert alert-info text-center">
+    Tu carrito esta vacio.
+  </p>
 
-<div class="container blanco scrollDown espacio-interno">
+</div>
+<div class="container blanco scrollDown espacio-interno" *ngIf="_dataS.j != 0">
   <p class="h2">
     Carrito de compras
   </p>

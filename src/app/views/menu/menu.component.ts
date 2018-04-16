@@ -3,6 +3,8 @@ import { AppRoutes } from '../../app.routes';
 import { AuthService } from '../../services/auth.service';
 import { DataService } from '../../services/data.service';
 
+//Componente de Menú
+
 @Component({
   selector: 'menu',
   templateUrl: './menu.component.html',

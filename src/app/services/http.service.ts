@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 
+//Servicio para obtener y actualizar la base de datos
+
 @Injectable()
 export class HttpService {
 

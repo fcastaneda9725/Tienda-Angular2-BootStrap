@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
 
+//Componente de Carrito de Compras
+
 @Component({
   selector: 'carrito',
   templateUrl: './carrito.component.html',

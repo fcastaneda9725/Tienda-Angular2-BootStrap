@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'buscador'
 })
 export class BuscadorPipe implements PipeTransform {
-// Implementación encontrada en internet
+// Buscador para el dashboard
   transform(items: any[], field: string, value: string): any[] {
         if (!items) {
             return [];

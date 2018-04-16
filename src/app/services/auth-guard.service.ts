@@ -2,6 +2,8 @@ import { AuthService } from './auth.service';
 import { Injectable } from '@angular/core';
 import { Router, CanActivate } from '@angular/router';
 
+//Servicio de Autorización y verificación de usuario en Firebase
+
 @Injectable()
 export class AuthGuard implements CanActivate {
 

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { AppRoutes } from '../../app.routes';
 
+//Componente de Ver Más
+
 @Component({
   selector: 'ver-mas',
   templateUrl: './ver-mas.component.html',

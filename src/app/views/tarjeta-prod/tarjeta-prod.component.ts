@@ -4,7 +4,7 @@ import { TitleCasePipe, CurrencyPipe } from '@angular/common';
 import { FormsModule, FormControl } from '@angular/forms';
 import { AppRoutes } from '../../app.routes';
 
-
+//Componente para las tarjetas de cada producto
 
 @Component({
   selector: 'tarjeta-prod',

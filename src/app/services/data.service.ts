@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { Response } from '@angular/http';
 
+//Servicio para el manejo de todos los datos de la App
 
 @Injectable()
 export class DataService {
@@ -32,32 +33,25 @@ export class DataService {
   pagarCarrito () {
     for ( let i in this.prod){
       this.prod[i].valor = 1;
-      console.log(this.prod.valor);
     }
     this.httpService.postDatos(this.prod)
     .subscribe(
       (data: Response) => { this.prod = data;
-                            console.log(this.prod);
                           })
     this.vaciarCarrito();
   }
 
   asignarIndex( i ) {
     this.prodEspecifico = this.prod[i];
-    console.log(this.prodEspecifico);
   }
 
   listaCompras( i ) {
 
-    console.log(this.prod);
-    console.log(this.prod[i].valor);
     this.listaCarrito[this.j] = this.prod[i];
     this.subtotal = this.listaCarrito[this.j].precio * this.listaCarrito[this.j].valor;
     this.total = this.total + this.subtotal;
-    console.log(this.subtotal);
-    console.log(this.total);
     this.j = this.j+1;
-    console.log(this.j);
+     //Dejo este comentario en Consola solo para depuración
     console.log(this.listaCarrito);
 
 
@@ -68,7 +62,6 @@ export class DataService {
   vaciarCarrito ( ) {
     for ( let i in this.prod){
       this.prod[i].valor = 1;
-      console.log(this.prod.valor);
     }
     this.listaCarrito = [];
     this.subtotal = 0;

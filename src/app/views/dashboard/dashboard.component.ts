@@ -6,7 +6,7 @@ import { HttpService } from '../../services/http.service';
 import { TarjetaProdComponent } from '../tarjeta-prod/tarjeta-prod.component';
 import { CarritoComponent } from '../carrito/carrito.component';
 
-
+//Componente Principal o Dashboard
 
 @Component({
   selector: 'app-dashboard',

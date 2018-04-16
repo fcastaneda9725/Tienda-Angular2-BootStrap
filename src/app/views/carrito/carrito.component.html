@@ -12,18 +12,16 @@
 
     <div class="col-12 col-md-6 margen-inferior">
       <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item" *ngFor="let compras of _dataS.listaCarrito"><img class="img-thumbnail" [src]="compras.url" [alt]="compras.nombre" />{{compras.nombre | titlecase}}<br />Cantidad: {{compras.valor}}<br />Subtotal: {{compras.valor * compras.precio | currency}}</li>
       </ul>
     </div>
 
     <div class="col-12 col-md-6">
       <p class="h3">
-        Total:
+        Total: {{ _dataS.total | currency}}
       </p>
-      <button type="button" class="btn btn-light">Light</button>
-      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-light" (click)="vaciarCarrito()">Cancelar</button>
+      <button type="button" class="btn btn-light" (click)="pagar()">Comprar</button>
     </div>
 
   </div>

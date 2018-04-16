@@ -13,4 +13,10 @@ export class HttpService {
     return this.http.get('https://tienda-next-u.firebaseio.com/productos.json')
       .map((response: Response)=> response.json())
   }
+
+  postDatos( base: any){
+    const datos = JSON.stringify(base);
+    return this.http.put('https://tienda-next-u.firebaseio.com/productos.json', datos)
+    .map((response: Response)=> response.json())
+  }
 }

@@ -62,6 +62,7 @@ export class DataService {
 
 
     return this.prod[i].cantidad = this.prod[i].cantidad - this.prod[i].valor;
+    return this.j;
   }
 
   vaciarCarrito ( ) {

@@ -6,7 +6,7 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li><a routerLink="/dashboard"><i class="fas fa-th"></i></a></li>
-      <li><a routerLink="/carrito"><i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger">2</span></i></a></li>
+      <li><a routerLink="/carrito"><i class="fas fa-shopping-cart"><span class="badge badge-pill badge-danger" *ngIf="_dataS.j != 0">{{_dataS.j}}</span></i></a></li>
       <li><a (click)="logOut()" routerLink="/"><i class="fas fa-sign-out-alt"></i></a></li>
     </ul>
   </div>

@@ -1,0 +1,6 @@
+Link de GitHub: https://github.com/fcastaneda9725/Tienda-Angular2-BootStrap
+
+Credenciales de Acceso:
+
+Usuario: demo@maindesign.mx
+Conotraseña: Next.U

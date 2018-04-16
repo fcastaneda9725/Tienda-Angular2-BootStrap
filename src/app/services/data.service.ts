@@ -65,10 +65,17 @@ export class DataService {
   }
 
   vaciarCarrito ( ) {
+    for ( let i in this.prod){
+      this.prod[i].valor = 1;
+      console.log(this.prod.valor);
+    }
     this.listaCarrito = [];
     this.subtotal = 0;
     this.total = 0;
     this.j = 0;
+
+    this.getBase();
+
   }
 
 

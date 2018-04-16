@@ -17,7 +17,7 @@
 
     <div class="col-12 col-md-6 margen-inferior">
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let compras of _dataS.listaCarrito;"><img class="img-thumbnail" [src]="compras.url" [alt]="compras.nombre" />{{compras.nombre | titlecase}}<br />Cantidad: {{compras.valor}}<br />Subtotal: {{compras.valor * compras.precio | currency}}</li>
+        <li class="list-group-item" *ngFor="let compras of _dataS.listaCarrito;"><img class="m-r-2 img-thumbnail img-carrito" [src]="compras.url" [alt]="compras.nombre" />{{compras.nombre | titlecase}}<br /><strong>Cantidad:</strong> {{compras.valor}}<br /><strong>Subtotal:</strong> {{compras.valor * compras.precio | currency}}</li>
       </ul>
     </div>
 

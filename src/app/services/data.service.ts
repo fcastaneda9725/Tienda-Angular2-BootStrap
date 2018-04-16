@@ -55,8 +55,7 @@ export class DataService {
     console.log(this.listaCarrito);
 
 
-    return this.prod[i].cantidad = this.prod[i].cantidad - this.prod[i].valor;
-    return this.j;
+    return this.prod[i].cantidad = this.prod[i].cantidad - this.prod[i].valor, this.j;
   }
 
   vaciarCarrito ( ) {
